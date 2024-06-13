@@ -1,13 +1,42 @@
 # React + TypeScript + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules. This is a typescript project using Tailwind CSS. A simple project structure is setup with dummy data and commonly used libraries such as Axios and React Router are installed.
 
-Currently, two official plugins are available:
+## Installation
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- clone this repo `git clone git@github.com:mrlinnth/react-vite-starter.git`
+- enter the directory
+- run `yarn`
+- run `yarn dev`
 
-## Expanding the ESLint configuration
+## References
+
+### Style and Theme
+
+- [Tailwind CSS](https://tailwindcss.com/docs/installation/using-postcss)
+- [DasiyUI](https://daisyui.com/)
+
+### State Management
+
+- [Recoil](https://recoiljs.org/docs/introduction/getting-started)
+
+### API Request and Response
+
+- [axios](https://www.freecodecamp.org/news/how-to-use-axios-with-react/)
+- [TanStack React Query](https://tanstack.com/query/latest/docs/framework/react/examples/basic)
+- [React Query and Axios with Typescript](https://www.bezkoder.com/react-query-axios-typescript/)
+- [JSONPlaceholder](https://jsonplaceholder.typicode.com/)
+
+### Routing
+
+- [React Router](https://reactrouter.com/en/main)
+
+### Linting
+
+- ESLint
+- Prettier
+
+### Expanding the ESLint configuration
 
 If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
 
@@ -20,9 +49,9 @@ export default {
     ecmaVersion: 'latest',
     sourceType: 'module',
     project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
+    tsconfigRootDir: __dirname
+  }
+};
 ```
 
 - Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
