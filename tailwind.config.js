@@ -5,7 +5,7 @@ export default {
   theme: {
     extend: {}
   },
-  plugins: [require('daisyui')],
+  plugins: [require('daisyui'), require('@tailwindcss/forms')],
   darkMode: 'class',
   daisyui: {
     themes: ['light', 'dark', 'cupcake']

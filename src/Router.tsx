@@ -1,28 +1,33 @@
+import Error from '@/Error';
+import Guard from '@/Guard';
+import Layout from '@/Layout';
 import Home from '@/pages/home';
+import Playground from '@/pages/playground';
+import Profile from '@/pages/profile';
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
-import Layout from './Layout';
 
 const routes = createBrowserRouter([
   {
     path: '/',
     element: <Layout />,
-    // errorElement: <Error />,
+    errorElement: <Error />,
     children: [
       {
         index: true,
         element: <Home />
+      },
+      {
+        path: 'playground',
+        element: <Playground />
+      },
+      {
+        path: 'profile/:name',
+        element: <Guard component={<Profile />} />
       }
-      // {
-      //   path: 'orders/:orderId',
-      //   element: <Guard component={<OrderDetails />} />,
-      //   loader: orderDetailsLoader
-      // }
     ]
   }
 ]);
 
-function Router() {
+export default function Router() {
   return <RouterProvider router={routes} />;
 }
-
-export default Router;

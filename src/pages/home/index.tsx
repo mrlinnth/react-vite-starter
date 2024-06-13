@@ -2,7 +2,7 @@ import { darkModeState } from '@/utils/atoms';
 import { useState } from 'react';
 import { useRecoilValue, useSetRecoilState } from 'recoil';
 
-function Home() {
+export default function Home() {
   const [themeName, setThemeName] = useState('');
   const darkMode = useRecoilValue(darkModeState);
   const setDarkMode = useSetRecoilState(darkModeState);
@@ -21,7 +21,7 @@ function Home() {
 
   return (
     <div data-theme={getTheme()}>
-      <div className="hero min-h-screen bg-base-200">
+      <div className="hero min-h-screen  bg-base-200">
         <div className="hero-content text-center">
           <div className="max-w-md">
             <h1 className="text-5xl font-bold">Hello there</h1>
@@ -45,5 +45,3 @@ function Home() {
     </div>
   );
 }
-
-export default Home;
