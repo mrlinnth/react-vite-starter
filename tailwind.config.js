@@ -5,6 +5,9 @@ export default {
   theme: {
     extend: {}
   },
-  plugins: [],
-  darkMode: 'class'
+  plugins: [require('daisyui')],
+  darkMode: 'class',
+  daisyui: {
+    themes: ['light', 'dark', 'cupcake']
+  }
 };
